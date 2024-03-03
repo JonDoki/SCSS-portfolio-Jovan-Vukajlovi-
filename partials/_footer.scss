@@ -1,0 +1,46 @@
+footer {
+  .wrap {
+    @extend %wrap;
+    padding-bottom: 0px;
+    border-bottom: 1px solid $background-color-dark-opacity;
+    .logo {
+      @extend %logo;
+      margin-top: 0.4rem;
+    }
+    .footer-menu {
+      ul {
+        word-spacing: 1ch;
+        li {
+          display: inline-block;
+          a {
+            color: #161616db;
+            font-size: 1.5rem;
+            &:hover {
+              color: $main-color;
+            }
+          }
+        }
+      }
+    }
+  }
+  .bottom {
+    @extend %wrap;
+    padding-top: 0px;
+    .logo {
+      @extend %logo;
+    }
+    .contact-message {
+      p {
+        color: $text-color;
+        font-weight: 400;
+      }
+    }
+  }
+}
+@media (max-width: 400px) {
+  footer {
+    .wrap {
+      width: 90%;
+    }
+  }
+}

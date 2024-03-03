@@ -1,0 +1,191 @@
+.kontaktForma {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  .footer-tekst {
+    background-color: #dbdedd;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    .naslov {
+      @extend %naslov;
+      width: 60ch;
+      margin-top: 5rem;
+    }
+    .envelope {
+      font-size: 30rem;
+      color: #16161620;
+      position: absolute;
+      bottom: -4vh;
+      right: -15%;
+    }
+  }
+  .forma {
+    background-color: #161616;
+    color: #dae1e4;
+    padding: 5rem 2rem;
+    label {
+      display: block;
+      margin-bottom: 1rem;
+      margin-top: 2rem;
+    }
+    form {
+      width: 90%;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      .forma-request {
+        grid-column: span 2;
+        textarea {
+          grid-column: span 2;
+          max-width: 80%;
+          min-width: 80%;
+          width: 80%;
+          max-height: 5rem;
+          min-height: 5rem;
+          height: 5rem;
+          font-size: 1rem;
+          background-color: #161616;
+          border-radius: 10px;
+          color: white;
+          padding: 0.5ch 1ch;
+          font-weight: 300;
+        }
+      }
+      #dugmeSubmit {
+        margin-top: 5vh;
+        background-color: #ec5c29;
+        border-radius: 5px;
+        color: #e5e5e5;
+        padding: 0;
+        transition: all 0.2s ease-in-out;
+        border: 0px transparent solid;
+        &:hover {
+          word-spacing: 1ch;
+          padding-left: 1ch;
+        }
+      }
+      input {
+        @extend %poljeForma;
+        &:hover {
+          border: $main-color 1px solid;
+        }
+      }
+      select {
+        @extend %poljeForma;
+        padding: 0 1rem;
+        &:hover {
+          border: $main-color 1px solid;
+        }
+        &:required:invalid {
+          color: gray;
+        }
+        option {
+          color: white;
+          &[value=""][disabled] {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+}
+@media (max-width:1440px) and (min-width:768px){
+  .kontaktForma{
+    .forma{
+      form{
+        input{
+          width:65%;
+        }
+        select{
+          width: 65%;
+        }
+        .forma-request{
+        textarea{
+          width: 82.5%;
+          max-width:82.5% ;
+          min-width: 82.5%;
+          //(100+65)/2=82.5
+        }}
+      }
+    }
+  }
+}
+@media (max-width:768px) and (min-width:400px){
+  .kontaktForma {
+    grid-template-columns: 1fr;
+    .footer-tekst{
+    .naslov {
+      margin-bottom: 5vh;
+      h3{
+        font-size: 2rem;
+        text-indent: 5.5rem;
+      }
+    }
+    .envelope {
+      display: none;
+    }}
+    .forma {
+      form {
+        grid-template-columns: 1fr;
+        input {
+          width: 100%;
+        }
+        select {
+          width: 100%;
+        }
+        .forma-request {
+          grid-column: span 1;
+          textarea {
+            height: 6rem;
+            max-height: 6rem;
+            min-height: 6rem;
+            width: 100%;
+            max-width: 100%;
+            min-width: 100%;
+            resize: none;
+          }
+        }
+      }
+    }
+  }
+}
+@media (max-width: 400px) {
+  .kontaktForma {
+    grid-template-columns: 1fr;
+    .footer-tekst{
+    .naslov {
+      margin-bottom: 5vh;
+      h3{
+        font-size: 2rem;
+        text-indent: 5.5rem;
+      }
+    }
+    .envelope {
+      display: none;
+    }}
+    .forma {
+      form {
+        grid-template-columns: 1fr;
+        input {
+          width: 100%;
+        }
+        select {
+          width: 100%;
+        }
+        .forma-request {
+          grid-column: span 1;
+          textarea {
+            height: 6rem;
+            max-height: 6rem;
+            min-height: 6rem;
+            width: 100%;
+            max-width: 100%;
+            min-width: 100%;
+            resize: none;
+          }
+        }
+      }
+    }
+  }
+}

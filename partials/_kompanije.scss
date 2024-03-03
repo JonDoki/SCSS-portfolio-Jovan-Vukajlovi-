@@ -1,0 +1,58 @@
+.kompanije {
+  margin: 0px auto;
+  text-align: center;
+  width: 30%;
+  overflow: hidden;
+  h3 {
+    font-size: 1rem;
+    font-weight: 700;
+    color: #a1a09f;
+  }
+  .carousel {
+    margin-top: 40px;
+    border-bottom: 40px;
+    display: flex;
+    width: 200%;
+    animation: bannermove 20s linear infinite;
+    font-size: 2rem;
+    color: #16161640;
+    div {
+      width: 100%;
+      ul {
+        display: flex;
+        list-style-type: none;
+        padding-left: 0;
+        margin: 0;
+        li {
+          width: 100%;
+          &:hover {
+            color: $main-color;
+          }
+        }
+      }
+    }
+  }
+}
+@keyframes bannermove {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+@media (max-width:768px) and (min-width:400px){}
+.kompanije{
+  width: 50%;
+}
+@media (max-width: 400px) {
+
+  .kompanije {
+    margin-top: 5vh;
+    width: 70%;
+    .carousel{
+      margin-top: 2vh;
+    }
+  }
+}

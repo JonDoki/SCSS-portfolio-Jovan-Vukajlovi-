@@ -1,0 +1,68 @@
+.projects {
+  margin-top: 15vh;
+  .wrap {
+    @extend %wrap;
+    .projekti-grid {
+      width: 100%;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      .naslov {
+        @extend %naslov;
+        padding-left: 2rem;
+        margin-bottom: 3vh;
+      }
+      div {
+        p {
+          max-width: 45ch;
+          padding-left: 2rem;
+          color: $text-color;
+        }
+      }
+      .slikaProjekat {
+        padding: 2rem;
+        border-radius: $border-radius;
+        overflow: hidden;
+        img {
+          width: 100%;
+          height: auto;
+          border-radius: $border-radius;
+        }
+      }
+    }
+  }
+}
+@media (max-width:768px) and (min-width:400px){
+.projects{
+  .wrap{
+    width: 90%;
+  
+  .projekti-grid{
+    .naslov{
+      h3 {
+        margin-top: 2px;
+        font-size: 2rem;
+        width: 90%;
+        br{display: none;}
+      }
+    }
+  }}
+}
+}
+@media screen and (max-width: 400px) {
+  .projects {
+    .wrap {
+      width: 100%;
+      padding: 0;
+      .projekti-grid {
+        grid-template-columns: 1fr;
+        .naslov {
+          h3 {
+            margin-top: 2px;
+            font-size: 2rem;
+            width: 90%;
+          }
+        }
+      }
+    }
+  }
+}

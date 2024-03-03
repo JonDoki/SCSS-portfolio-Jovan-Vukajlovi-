@@ -1,0 +1,145 @@
+.hero {
+  @include d-flex;
+  margin-top: 15vh;
+  margin-bottom: 15vh;
+  .wrap {
+    @extend %wrap;
+    justify-content: space-between;
+    .slikaZamorce{
+      width: 40%;
+      img {
+        width: 100%;
+        height: auto;
+      }
+    }
+    img {
+      clip-path: polygon(0 0, 53% 0, 100% 13%, 100% 100%, 0 100%);
+      background-color: $main-color;
+      border-radius: $border-radius;
+    }
+    #isecak {
+      clip-path: polygon(53% 0, 100% 0, 100% 100%, 0 100%, 0 13%);
+    }
+    .centar {
+      height: 100%;
+      display: grid;
+      place-content: center;
+      img {
+        clip-path: polygon(0 0, 53% 0, 100% 13%, 100% 100%, 0 100%);
+        background-color: #ec5c29;
+        border-radius: 10px;
+      }
+      .hero-tekst {
+        p {
+          max-width: 60ch;
+          margin-top: 20px;
+          margin-bottom: 40px;
+        }
+        .naslov {
+          position: relative;
+          @extend %naslov;
+        }
+        p {
+          color: $text-color;
+        }
+        .dugme {
+          background-color: $main-color;
+          border-radius: 5px;
+          color: #e5e5e5;
+          @extend %button;
+
+          &:hover {
+            background-color: $background-color-dark;
+          }
+        }
+      }
+    }
+  }
+}
+@media (max-width:1440px) and (min-width:768px){
+  .hero {
+    margin-top: 15vh;
+    margin-bottom: 15vh;
+    .wrap {
+      width: 90%;
+      .slikaZamorce{
+        width: 40%;
+      }
+      .centar {
+        .hero-tekst {
+          margin-bottom: 5vh;
+          
+        }
+      }
+    }
+  }
+}
+@media (max-width:768px) and (min-width:400px){
+  .hero {
+    margin-top: 5vh;
+    margin-bottom: 0;
+    .wrap {
+      width: 90%;
+      .slikaZamorce{
+        width: 40%;
+      }
+      .centar {
+        .hero-tekst {
+          margin-bottom: 10vh;
+          .naslov {
+            margin-top: 3vh;
+            max-width: 40ch;
+            h1 {
+              font-size: 2rem;
+              text-indent: 4em;
+            }
+            h3{
+              font-size: 2rem;
+              text-indent: 4em;
+            }
+            span {
+              font-size: 0.875rem;
+              
+            }
+          }
+          p{
+            max-width: 30ch;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .hero {
+    margin-top: 5vh;
+    margin-bottom: 0;
+    .wrap {
+      width: 90%;
+      flex-direction: column-reverse;
+      .slikaZamorce{
+        width: 100%;
+      }
+      .centar {
+        .hero-tekst {
+          margin-bottom: 5vh;
+          .naslov {
+            h1 {
+              font-size: 2rem;
+              text-indent: 4em;
+            }
+            h3{
+              margin-top: 5vh;
+              font-size: 2rem;
+              text-indent: 4em;
+            }
+            span {
+              font-size: 0.875rem;
+            }
+          }
+        }
+      }
+    }
+  }
+}
